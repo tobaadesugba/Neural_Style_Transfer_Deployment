@@ -73,7 +73,7 @@ class ImageProcessing():
         """
         img = tf.keras.utils.img_to_array(image)  # convert image to numpy array
         img = tf.cast(img, tf.uint8)  # convert image from int to unsigned int 8bits
-        img = tf.image.convert_image_dtype(image, tf.float32)
+        img = tf.image.convert_image_dtype(img, tf.float32)
         shape = tf.cast(tf.shape(img)[:-1], tf.float32)  # cast image height and width shape as float
         long_dim = max(shape)  # store max dim of shape (one of height or width)
         scale = 256 / long_dim  # get stated scale of maximum dimension to the dimension of the image
