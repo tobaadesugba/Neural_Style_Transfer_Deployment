@@ -68,9 +68,8 @@ with st.sidebar:
         st.stop()
 
     # display input image if available
-    if image:
-        if file_selection != "Webcam Selection":
-            st.image(image=image, caption="Input Image")
+    if image and file_selection != "Webcam Selection":
+        st.image(image=image, caption="Input Image")
 
 st.header("Output Viewer")
 st.write("Don't forget to set your input image in the sidebar 👈")
